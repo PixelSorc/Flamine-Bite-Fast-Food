@@ -1,0 +1,25 @@
+{
+  "name": "flamin'-bite-fast-food",
+  "version": "1.0.0",
+  "description": "Sitio web de comida rápida Flamin' Bite con backend Express + MySQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "db:init": "node scripts/init-db.js",
+    "db:migrate:tracking": "node scripts/migrate-order-tracking.js",
+    "hash-password": "node scripts/hash-password.js"
+  },
+  "keywords": [
+    "fast-food",
+    "express",
+    "mysql"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.2"
+  }
+}

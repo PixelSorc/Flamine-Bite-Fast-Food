@@ -1,0 +1,113 @@
+/* Estilos para la página del carrito mejorada */
+.checkout-left {
+    width: 100%;
+}
+
+.cart-item-image {
+    width: 65px;  /* Reducimos el tamaño de la imagen */
+    height: 65px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+.cart-item-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item-name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.cart-item-price {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-quantity span {
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+.quantity-change {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.cart-item-total {
+    font-weight: bold;
+    min-width: 100px;
+    text-align: right;
+}
+
+.totals {
+    border-top: 2px solid #eee;
+    padding-top: 20px;
+    font-size: 1.2em;
+}
+
+/* --- Estilos para hacerlo adaptable (Responsive) --- */
+@media (max-width: 768px) {
+    .cart-item {
+        /* En pantallas pequeñas, los elementos se envuelven en lugar de estar en una sola línea */
+        flex-wrap: wrap; 
+        row-gap: 15px; /* Añade espacio vertical cuando se envuelven */
+    }
+
+    .cart-item-info {
+        /* Ocupa el espacio entre la imagen y los controles de cantidad */
+        flex-basis: calc(100% - 80px); /* 100% menos el espacio de la imagen y el gap */
+    }
+
+    .cart-item-quantity {
+        order: 3; /* Mueve los controles de cantidad al final */
+        margin-left: auto; /* Los alinea a la derecha */
+    }
+
+    .cart-item-total {
+        display: none; /* Ocultamos el total por ítem para simplificar la vista móvil */
+    }
+}
+
+/* --- Estilos para el contador del carrito en el header --- */
+.header-actions .btn-cart {
+    position: relative; /* Necesario para posicionar el contador */
+    background: none;
+    color: inherit; /* Hereda el color del texto del header */
+    text-decoration: none; /* Quita el subrayado si es un enlace */
+    border: none;
+    padding-right: 15px; /* Añade espacio para que el contador no se salga */
+    cursor: pointer;
+    font-size: 1em; /* Asegura que el tamaño de "Carrito" sea consistente */
+}
+
+.cart-counter {
+    position: absolute;
+    top: -2px; /* Ajusta la posición vertical */
+    right: 0; /* Lo pega al borde derecho del contenedor */
+    background-color: #ff4500; /* Un color naranja-rojo que resalta */
+    color: white;
+    border-radius: 50%; /* Lo hace circular */
+    padding: 2px 6px; /* Espaciado interno */
+    font-size: 12px; /* Tamaño de fuente pequeño */
+    font-weight: bold;
+    line-height: 1;
+    min-width: 20px; /* Asegura que el círculo no sea demasiado pequeño */
+    text-align: center;
+}

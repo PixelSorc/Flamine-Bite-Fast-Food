@@ -1,0 +1,86 @@
+/* Control de carrito compartido: etiqueta clara y contador en una insignia */
+.header-actions .btn-cart {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 46px;
+    padding: 7px 10px 7px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    background: linear-gradient(135deg, #c62828, #e53935);
+    color: #fff !important;
+    font: 700 15px/1.1 'Segoe UI', Tahoma, sans-serif;
+    text-decoration: none !important;
+    white-space: nowrap;
+    box-shadow: 0 3px 10px rgba(177, 37, 37, 0.2);
+    transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.header-actions .btn-cart:hover {
+    background: linear-gradient(135deg, #ad1f1f, #d32f2f);
+    color: #fff !important;
+    text-decoration: none !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(177, 37, 37, 0.28);
+}
+
+.header-actions .btn-cart:focus-visible {
+    outline: 3px solid #ffb74d;
+    outline-offset: 3px;
+}
+
+.header-actions .btn-cart .cart-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.header-actions .btn-cart .btn-cart-label {
+    text-decoration: none;
+}
+
+.header-actions .btn-cart .cart-counter {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 25px;
+    height: 25px;
+    padding: 0 6px;
+    border: 2px solid rgba(255, 255, 255, 0.72);
+    border-radius: 999px;
+    background: #fff;
+    color: #b71c1c;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 540px) {
+    .header-actions .btn-cart {
+        min-height: 42px;
+        gap: 8px;
+        padding: 6px 8px 6px 11px;
+        font-size: 14px;
+    }
+
+    .header-actions .btn-cart .cart-icon {
+        width: 18px;
+        height: 18px;
+        flex-basis: 18px;
+    }
+
+    .header-actions .btn-cart .cart-counter {
+        min-width: 23px;
+        height: 23px;
+        font-size: 11px;
+    }
+}
